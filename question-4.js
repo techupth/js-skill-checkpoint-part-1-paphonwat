@@ -5,3 +5,7 @@ const inventory = [
   { name: "Orange", price: 30, quantity: 60 },
 ];
 // เริ่มเขียนโค้ดตรงนี้
+const minquantity = inventory.reduce((min, item) => {
+  return item.quantity < min ? item.quantity : min;
+}, inventory[0].quantity)
+console.log(minquantity)
